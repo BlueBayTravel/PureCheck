@@ -1,0 +1,19 @@
+{
+    "name": "PureCheck",
+    "version": "1.0",
+    "description": "Add spellchecking to Pure Campaign",
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/icon-16.png",
+            "24": "icons/icon-24.png",
+            "32": "icons/icon-32.png"
+        }
+    },
+    "content_scripts": [{
+        "matches": ["https://app.pure360.com/editor/", "https://app.pure360.com/editor/*"],
+        "js": ["content.js"],
+        "run_at": "document_end",
+        "all_frames": true
+    }],
+    "manifest_version": 2
+}
